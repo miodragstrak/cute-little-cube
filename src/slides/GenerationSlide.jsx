@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import connectorRender from '../assets/images/renders/connector.png'
+import connectorRender from '../assets/images/renders/connector.gif'
 
 const constructionLines = [
   'left-[16%] top-[24%] w-[38%] rotate-[11deg]',
