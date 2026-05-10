@@ -130,6 +130,58 @@
     animation: network-pulse 3.8s ease-in-out infinite;
   }
 
+  .depin-field {
+    background:
+      radial-gradient(circle at 72% 34%, rgb(217 79 123 / 18%), transparent 26%),
+      radial-gradient(circle at 78% 62%, rgb(245 176 68 / 15%), transparent 30%),
+      linear-gradient(90deg, transparent 36%, rgb(255 255 255 / 3.5%), transparent);
+    mask-image: radial-gradient(circle at 54% 50%, black 0%, transparent 76%);
+    animation: depin-field-drift 18s ease-in-out infinite;
+  }
+
+  .depin-link-layer {
+    filter:
+      drop-shadow(0 0 10px rgb(245 176 68 / 18%))
+      drop-shadow(0 0 20px rgb(217 79 123 / 12%));
+  }
+
+  .depin-link-base,
+  .depin-link-flow {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .depin-link-base {
+    stroke: rgb(245 176 68 / 20%);
+    stroke-width: 1.2;
+  }
+
+  .depin-link-flow {
+    stroke: rgb(245 176 68 / 82%);
+    stroke-linecap: round;
+    stroke-width: 2.2;
+  }
+
+  .depin-node {
+    height: 0.95rem;
+    width: 0.95rem;
+    border: 1px solid rgb(245 176 68 / 62%);
+    background: rgb(13 4 24 / 78%);
+    box-shadow:
+      inset 0 0 8px rgb(245 176 68 / 18%),
+      0 0 26px rgb(245 176 68 / 34%),
+      0 0 56px rgb(217 79 123 / 22%);
+    transform: rotate(45deg);
+  }
+
+  .depin-node::after {
+    content: "";
+    position: absolute;
+    inset: 32%;
+    background: rgb(245 176 68 / 76%);
+    box-shadow: 0 0 16px rgb(245 176 68 / 46%);
+  }
+
   .machine-stage {
     box-shadow:
       inset 0 0 0 1px rgb(245 176 68 / 8%),
@@ -382,6 +434,17 @@
 
   50% {
     transform: scale(1.08) rotate(45deg);
+  }
+}
+
+@keyframes depin-field-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(1.4rem, -0.8rem, 0) scale(1.03);
   }
 }
 
