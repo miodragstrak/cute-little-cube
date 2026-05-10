@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import machineStep from '../assets/images/machines/machine-step.gif'
 
 const stats = [
   ['Nodes', 'Machine capacity'],
@@ -32,26 +33,40 @@ function NetworkSlide() {
           initial={{ opacity: 0, y: 18 }}
           transition={{ delay: 0.32, duration: 0.64, ease: [0.22, 1, 0.36, 1] }}
         >
-          Cute Little Cube routes product intent across a distributed network of
+          Materialize routes product intent across a distributed network of
           production partners, turning idle machines into accessible infrastructure.
         </motion.p>
       </div>
 
       <motion.div
         animate={{ opacity: 1, scale: 1 }}
-        className="relative min-h-[28rem] overflow-hidden border border-violet-200/12 bg-white/[0.03] p-7 backdrop-blur-md"
+        className="machine-stage relative min-h-[28rem] overflow-hidden bg-white/[0.025] p-7 backdrop-blur-md"
         initial={{ opacity: 0, scale: 0.96 }}
         transition={{ delay: 0.25, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(168,85,247,0.18),transparent_48%)]" />
-        <div className="relative grid h-full min-h-[24rem] place-items-center">
-          <div className="network-node h-24 w-24 border border-amber-200/46 bg-amber-200/10 shadow-[0_0_54px_rgba(245,158,11,0.28)]" />
-          <div className="absolute left-[14%] top-[20%] h-16 w-16 border border-violet-200/28 bg-violet-300/10" />
-          <div className="absolute right-[16%] top-[18%] h-12 w-12 border border-violet-200/28 bg-violet-300/10" />
-          <div className="absolute bottom-[18%] left-[20%] h-12 w-12 border border-violet-200/28 bg-violet-300/10" />
-          <div className="absolute bottom-[16%] right-[18%] h-16 w-16 border border-violet-200/28 bg-violet-300/10" />
-          <div className="absolute inset-x-[18%] top-1/2 h-px bg-gradient-to-r from-transparent via-amber-200/28 to-transparent" />
-          <div className="absolute inset-y-[19%] left-1/2 w-px bg-gradient-to-b from-transparent via-violet-200/30 to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_56%_42%,rgba(245,176,68,0.08),transparent_42%),radial-gradient(circle_at_44%_62%,rgba(217,79,123,0.07),transparent_52%)]" />
+        <div className="relative min-h-[24rem] overflow-hidden">
+          <motion.img
+            alt="Manufacturing machine step"
+            animate={{ scale: [1.02, 1.055, 1.02], x: [0, -8, 0] }}
+            className="machine-step-image absolute inset-0 h-full w-full object-cover"
+            draggable="false"
+            src={machineStep}
+            transition={{ duration: 12, ease: 'easeInOut', repeat: Infinity }}
+          />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,1,4,0.42)_0%,rgba(2,1,4,0.06)_42%,rgba(2,1,4,0.24)_100%),linear-gradient(180deg,rgba(2,1,4,0.04),rgba(2,1,4,0.42))]" />
+          <motion.div
+            animate={{ opacity: [0.18, 0.44, 0.18], x: ['-20%', '24%', '-20%'] }}
+            className="absolute left-1/2 top-[18%] h-[62%] w-20 -translate-x-1/2 bg-gradient-to-r from-transparent via-amber-100/18 to-transparent blur-xl"
+            transition={{ duration: 7.8, ease: 'easeInOut', repeat: Infinity }}
+          />
+          <div className="absolute left-8 top-8 font-mono text-[0.62rem] uppercase tracking-[0.28em] text-amber-100/58">
+            local fabrication node
+          </div>
+          <div className="absolute bottom-8 right-8 font-mono text-[0.62rem] uppercase tracking-[0.28em] text-violet-50/48">
+            capacity online
+          </div>
+          <div className="absolute inset-x-8 top-1/2 h-px bg-gradient-to-r from-transparent via-amber-200/24 to-transparent" />
         </div>
 
         <div className="relative grid gap-3 sm:grid-cols-3">

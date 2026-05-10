@@ -86,9 +86,9 @@ function BrokenPipeScene() {
         transition={{ duration: 5.2, ease: 'easeInOut', repeat: Infinity }}
       />
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_55%_48%,transparent_0%,rgba(0,0,0,0.12)_24%,rgba(2,1,4,0.88)_82%),linear-gradient(90deg,rgba(2,1,4,0.96)_0%,rgba(2,1,4,0.36)_34%,rgba(2,1,4,0.1)_66%,rgba(2,1,4,0.78)_100%)]" />
-      <div className="absolute inset-0 bg-violet-950/24 mix-blend-color" />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,158,11,0.06),transparent_24%,rgba(168,85,247,0.08)_74%,rgba(0,0,0,0.62))]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_58%_48%,transparent_0%,rgba(0,0,0,0.04)_30%,rgba(2,1,4,0.48)_88%),linear-gradient(90deg,rgba(2,1,4,0.94)_0%,rgba(2,1,4,0.28)_31%,rgba(2,1,4,0.02)_67%,rgba(2,1,4,0.34)_100%)]" />
+      <div className="absolute inset-0 bg-violet-950/12 mix-blend-color" />
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(245,176,68,0.08),transparent_24%,rgba(217,79,123,0.05)_74%,rgba(0,0,0,0.34))]" />
       <div className="absolute left-[12%] top-[48%] h-px w-[76%] bg-gradient-to-r from-transparent via-amber-200/28 to-transparent" />
       <div className="absolute right-[9%] top-[18%] h-[62%] w-px bg-gradient-to-b from-transparent via-violet-200/20 to-transparent" />
       <div className="absolute bottom-[18%] right-[12%] h-px w-[34%] bg-gradient-to-r from-transparent via-violet-200/18 to-transparent" />

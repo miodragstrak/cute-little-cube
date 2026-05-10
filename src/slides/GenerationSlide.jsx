@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import connectorRender from '../assets/images/renders/connector.png'
 
 const constructionLines = [
   'left-[16%] top-[24%] w-[38%] rotate-[11deg]',
@@ -74,39 +75,51 @@ function GeneratedConnector() {
         />
       ))}
 
-      <div className="absolute left-1/2 top-1/2 h-[19rem] w-[19rem] -translate-x-1/2 -translate-y-1/2 sm:h-[24rem] sm:w-[24rem]">
+      <div className="absolute left-1/2 top-1/2 h-[25rem] w-[18rem] -translate-x-1/2 -translate-y-1/2 sm:h-[31rem] sm:w-[22rem]">
         <motion.div
-          animate={{ opacity: 1, scale: 1, rotate: 45 }}
-          className="connector-shell absolute inset-[14%] border border-amber-100/34 bg-gradient-to-br from-violet-200/10 via-white/[0.035] to-amber-200/12 shadow-[0_0_100px_rgba(168,85,247,0.28)]"
-          initial={{ opacity: 0, scale: 0.72, rotate: 28 }}
-          transition={{ delay: 0.34, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        />
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          className="connector-render-shell absolute inset-0"
+          initial={{ opacity: 0, scale: 0.94, y: 18 }}
+          transition={{ delay: 0.34, duration: 0.95, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <motion.div
+            animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
+            className="absolute inset-0"
+            initial={{ clipPath: 'inset(100% 0% 0% 0%)' }}
+            transition={{ delay: 0.46, duration: 1.75, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <img
+              alt="Generated manufacturable connector"
+              className="connector-render-image h-full w-full object-contain"
+              draggable="false"
+              src={connectorRender}
+            />
+          </motion.div>
+
+          <motion.div
+            animate={{ opacity: [0, 0.78, 0], y: ['-52%', '52%'] }}
+            className="absolute left-[14%] top-1/2 h-20 w-[72%] -translate-y-1/2 bg-gradient-to-b from-transparent via-amber-100/34 to-transparent blur-md"
+            transition={{ delay: 0.52, duration: 2.3, ease: 'easeInOut', repeat: Infinity }}
+          />
+
+          <motion.div
+            animate={{ opacity: [0.18, 0.42, 0.18] }}
+            className="connector-render-wire absolute inset-[8%] border border-amber-100/22"
+            transition={{ delay: 1.2, duration: 3.4, ease: 'easeInOut', repeat: Infinity }}
+          />
+        </motion.div>
 
         <motion.div
-          animate={{ opacity: 1, x: 0 }}
-          className="connector-collar absolute left-[3%] top-1/2 h-[34%] w-[32%] -translate-y-1/2 border border-violet-100/26 bg-black/38"
-          initial={{ opacity: 0, x: -44 }}
-          transition={{ delay: 0.58, duration: 0.76, ease: [0.22, 1, 0.36, 1] }}
+          animate={{ opacity: 1, scaleX: 1 }}
+          className="absolute left-[8%] top-[19%] h-px w-[84%] origin-left bg-gradient-to-r from-transparent via-fuchsia-100/28 to-transparent"
+          initial={{ opacity: 0, scaleX: 0 }}
+          transition={{ delay: 0.82, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         />
-
         <motion.div
-          animate={{ opacity: 1, x: 0 }}
-          className="connector-collar absolute right-[3%] top-1/2 h-[34%] w-[32%] -translate-y-1/2 border border-violet-100/26 bg-black/38"
-          initial={{ opacity: 0, x: 44 }}
-          transition={{ delay: 0.68, duration: 0.76, ease: [0.22, 1, 0.36, 1] }}
-        />
-
-        <motion.div
-          animate={{ opacity: 1, scale: 1 }}
-          className="absolute left-1/2 top-1/2 h-[42%] w-[42%] -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-100/38 bg-black/42 shadow-[0_0_54px_rgba(245,158,11,0.16)]"
-          initial={{ opacity: 0, scale: 0.5 }}
-          transition={{ delay: 0.82, duration: 0.74, ease: [0.22, 1, 0.36, 1] }}
-        />
-
-        <motion.div
-          animate={{ opacity: [0, 0.68, 0], y: ['-58%', '58%'] }}
-          className="absolute left-[8%] top-1/2 h-16 w-[84%] -translate-y-1/2 bg-gradient-to-b from-transparent via-amber-100/24 to-transparent blur-md"
-          transition={{ delay: 1.05, duration: 3.4, ease: 'easeInOut', repeat: Infinity }}
+          animate={{ opacity: 1, scaleX: 1 }}
+          className="absolute bottom-[17%] left-[8%] h-px w-[84%] origin-right bg-gradient-to-r from-transparent via-amber-100/30 to-transparent"
+          initial={{ opacity: 0, scaleX: 0 }}
+          transition={{ delay: 0.95, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         />
       </div>
 
@@ -116,7 +129,7 @@ function GeneratedConnector() {
         initial={{ opacity: 0, y: 14 }}
         transition={{ delay: 1.0, duration: 0.62, ease: [0.22, 1, 0.36, 1] }}
       >
-        adaptive connector generated
+        manufacturable geometry generated
       </motion.div>
     </motion.div>
   )

@@ -57,7 +57,7 @@ function PresentationLayout({ slides }) {
 
   return (
     <main className="presentation-shell relative h-screen w-screen overflow-hidden bg-black text-white">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(168,85,247,0.28),transparent_34%),radial-gradient(circle_at_78%_74%,rgba(245,158,11,0.15),transparent_30%),linear-gradient(135deg,#050208_0%,#09000f_44%,#020104_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_15%,rgba(194,58,112,0.18),transparent_34%),radial-gradient(circle_at_78%_74%,rgba(245,176,68,0.14),transparent_30%),linear-gradient(135deg,#050208_0%,#0d0418_44%,#020104_100%)]" />
       <div className="presentation-grid pointer-events-none absolute inset-0 opacity-45" />
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.84)_0%,transparent_22%,transparent_78%,rgba(0,0,0,0.78)_100%)]" />
 
@@ -78,7 +78,7 @@ function PresentationLayout({ slides }) {
 
       <div className="absolute bottom-0 left-0 z-20 h-px w-full bg-white/10">
         <motion.div
-          className="h-full bg-gradient-to-r from-violet-400 via-fuchsia-300 to-amber-300"
+          className="h-full bg-gradient-to-r from-violet-400 via-[#d94f7b] to-[#f5b044]"
           animate={{ width: progressWidth }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         />

@@ -4,6 +4,8 @@ import ProblemSlide from './slides/ProblemSlide'
 import GenerationSlide from './slides/GenerationSlide'
 import FlowSlide from './slides/FlowSlide'
 import NetworkSlide from './slides/NetworkSlide'
+import TeamSlide from './slides/TeamSlide'
+import ClosingSlide from './slides/ClosingSlide'
 
 const slides = [
   {
@@ -30,6 +32,16 @@ const slides = [
     id: 'network',
     eyebrow: 'Decentralized manufacturing mesh',
     component: NetworkSlide,
+  },
+  {
+    id: 'team',
+    eyebrow: 'Founding team',
+    component: TeamSlide,
+  },
+  {
+    id: 'closing',
+    eyebrow: 'Future infrastructure',
+    component: ClosingSlide,
   },
 ]
 
